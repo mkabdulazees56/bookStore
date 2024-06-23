@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "name": "F. Scott Fitzgerald",
+    "price": 10.99,
+    "category": "Fiction",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 2,
+    "title": "To Kill a Mockingbird",
+    "name": "Harper Lee",
+    "price": 7.19,
+    "category": "Fiction",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 3,
+    "title": "1984",
+    "name": "George Orwell",
+    "price": 6.89,
+    "category": "Science Fiction",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 4,
+    "title": "Pride and Prejudice",
+    "name": "Jane Austen",
+    "price": 4.99,
+    "category": "Romance",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 5,
+    "title": "The Catcher in the Rye",
+    "name": "J.D. Salinger",
+    "price": 8.99,
+    "category": "Fiction",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 6,
+    "title": "The Hobbit",
+    "name": "J.R.R. Tolkien",
+    "price": 10.39,
+    "category": "Fantasy",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 7,
+    "title": "Frankenstein",
+    "name": "Mary Shelley",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 8,
+    "title": "Dracula",
+    "name": "Bram Stoker",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 9,
+    "title": "Moby-Dick",
+    "name": "Herman Melville",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 10,
+    "title": "The Adventures of Sherlock Holmes",
+    "name": "Arthur Conan Doyle",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  },
+  {
+    "id": 11,
+    "title": "The Scarlet Letter",
+    "name": "Nathaniel Hawthorne",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/red-hardcover-book-front-cover_1101-833.jpg?w=360&t=st=1719052602~exp=1719053202~hmac=3cf5976a703bec344bf4d2025f317709cfdfdfc681dcef944d7d8a1078ebfda0"
+  }
+]
