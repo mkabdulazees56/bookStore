@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import { React, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function Login() {
   useEffect(() => {
@@ -24,7 +26,32 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/login", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Loggedin Successfully");
+          document.getElementById("login_modal").close();
+          setTimeout(() => {
+            window.location.reload();
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 1000);
+        }
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error: " + err.response.data.message);
+          setTimeout(() => {}, 2000);
+        }
+      });
+  };
   return (
     <div>
       <dialog id="login_modal" className="modal">
@@ -38,10 +65,7 @@ function Login() {
           <h3 className="font-bold text-lg">Login</h3>
           <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
-              <label
-                className="block text-sm font-bold mb-2"
-                htmlFor="email"
-              >
+              <label className="block text-sm font-bold mb-2" htmlFor="email">
                 Email
               </label>
               <input
@@ -53,7 +77,7 @@ function Login() {
                 {...register("email", { required: true })}
               />
               <br />
-               {errors.email && (
+              {errors.email && (
                 <span className="text-sm text-red-500">
                   This field is required
                 </span>
@@ -75,7 +99,7 @@ function Login() {
                 {...register("password", { required: true })}
               />
               <br />
-               {errors.password && (
+              {errors.password && (
                 <span className="text-sm text-red-500">
                   This field is required
                 </span>

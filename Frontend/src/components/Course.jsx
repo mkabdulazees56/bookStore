@@ -1,16 +1,32 @@
-import React, { useState } from 'react';
-import list from '../../public/list.json';
-import Cards from './Cards';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import Cards from "./Cards";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Course = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/book");
+        setBook(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBook();
+  }, []);
+
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Get unique categories
-  const categories = ['All', ...new Set(list.map(item => item.category))];
+  const categories = ["All", ...new Set(book.map((item) => item.category))];
 
   // Filter list based on selected category
-  const filteredList = selectedCategory === 'All' ? list : list.filter(item => item.category === selectedCategory);
+  const filteredList =
+    selectedCategory === "All"
+      ? book
+      : book.filter((item) => item.category === selectedCategory);
 
   return (
     <>
@@ -32,10 +48,14 @@ const Course = () => {
         </div>
         <div className="">
           <div className="flex justify-center mb-8 flex-wrap">
-            {categories.map(category => (
+            {categories.map((category) => (
               <button
                 key={category}
-                className={`px-4 py-2 mx-2 mt-2 rounded-md ${selectedCategory === category ? 'bg-blue-500 text-white dark:text-white' : 'bg-gray-200 dark:bg-gray-700 dark:text-gray-300'}`}
+                className={`px-4 py-2 mx-2 mt-2 rounded-md ${
+                  selectedCategory === category
+                    ? "bg-blue-500 text-white dark:text-white"
+                    : "bg-gray-200 dark:bg-gray-700 dark:text-gray-300"
+                }`}
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
@@ -43,7 +63,7 @@ const Course = () => {
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {filteredList.map(item => (
+            {filteredList.map((item) => (
               <Cards key={item.id} item={item} />
             ))}
           </div>
