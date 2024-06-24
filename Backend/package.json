@@ -1,0 +1,26 @@
+{
+  "name": "bookshelf",
+  "version": "1.0.0",
+  "description": "back end of book store",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkabdulazees56/bookStore.git"
+  },
+  "author": "Abdul Azees",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkabdulazees56/bookStore/issues"
+  },
+  "homepage": "https://github.com/mkabdulazees56/bookStore#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3"
+  }
+}
